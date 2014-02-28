@@ -1,0 +1,12 @@
+%section.register.container
+= form_for(@user) do |f|
+  = render 'common/form_errors', object: @user
+  %header
+    %h1 Log in
+  %fielset
+    = f.label :username
+    = f.text_field :username
+    = f.label :password
+    = f.password_field :password
+  %fieldset.action
+    = f.submit 'login', class: 'btn btn-success'
